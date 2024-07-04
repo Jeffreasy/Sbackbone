@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      MONGODB_URI: mongodb+srv://jeffreyed:<password>@cluster0.ljdq3wb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
     steps:
     - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16' # Update de Node.js versie naar 16 of hoger
 
     - name: Install dependencies
       run: npm install
